@@ -1,0 +1,15 @@
+{
+  "_QPVersion": "0.1.1",
+  "name": "${mod_name}",
+  "id": "${mod_id}",
+  "version": "${version}",
+  "author": "Jess",
+  "packageId": "com.beatgames.beatsaber",
+  "packageVersion": "1.40.8_7379",
+  "description": "A library for accessing Discord Social SDK for game activities.",
+  "dependencies": [],
+  "modFiles": [],
+  "lateModFiles": [],
+  "libraryFiles": [],
+  "fileCopies": []
+}
