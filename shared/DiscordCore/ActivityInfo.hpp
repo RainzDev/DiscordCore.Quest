@@ -1,8 +1,11 @@
+#pragma once
+
 #include <string>
 #include <ctime>
 #include <array>
 
-void Init();
+namespace DiscordCore {
+
 
 struct Secrets {
     std::string join;
@@ -38,7 +41,11 @@ struct Activity {
     Assets assets;
     Party party;
     Secrets secrets;
-    bool instance;
+    bool instance = false;
 };
 
-void SetActivity(Activity info);
+void Init();
+
+void SetActivity(const Activity& activity);
+
+}
