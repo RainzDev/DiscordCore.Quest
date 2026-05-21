@@ -1,3 +1,6 @@
+# SDK
+include/discord_social_sdk/
+
 # VSCode
 .cache/
 .vscode/

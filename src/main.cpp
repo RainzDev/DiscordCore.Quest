@@ -1,3 +1,4 @@
+#define DISCORDPP_IMPLEMENTATION
 // Include our main header file, containing the logger
 #include "main.hpp"
 

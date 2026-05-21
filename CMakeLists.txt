@@ -5,6 +5,8 @@ include(qpm_defines.cmake)
 
 project(${COMPILE_ID})
 
+find_package(discord_partner_sdk REQUIRED CONFIG)
+
 # C++ standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED 20)
@@ -38,6 +40,13 @@ add_compile_definitions("PAPER_ROOT_FOLDER_LENGTH=${FOLDER_LENGTH}")
 # Define the code directories
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+set(DISCORD_SDK_ROOT "${CMAKE_SOURCE_DIR}/include/discord_social_sdk")
+set(DISCORD_SDK_LIB_DIR "${DISCORD_SDK_ROOT}/lib/release")
+set(DISCORD_SDK_BIN_DIR "${DISCORD_SDK_ROOT}/bin/release")
+set(DISCORD_SDK_INCLUDE_DIR "${DISCORD_SDK_ROOT}/include")
+
+target_link_libraries(${COMPILE_ID} discord_partner_sdk::discord_partner_sdk)
 
 # Recursively get all source files
 recurse_files(cpp_file_list ${SOURCE_DIR}/*.cpp)
