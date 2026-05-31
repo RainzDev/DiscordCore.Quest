@@ -1,0 +1,3 @@
+namespace discordpp {
+    class AuthorizationArgs;
+}
