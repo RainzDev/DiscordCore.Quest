@@ -6,7 +6,7 @@ namespace DiscordCore {
     class Client {
         public:
             void CreateInstance();
-            void Shutdown();
+            void Disconnect();
             void Authorize();
 
             ~Client();  // delete client pointer in cpp!!
